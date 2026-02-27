@@ -5,12 +5,12 @@ public partial class Recipe
     public string Name { get; }
     public int Servings { get; }
     public string[] Ingredient;
-    public int IngredientNum;
+    public int IngredientNum = 0;
 
-    public Recipe(string name, int servings, int ingredientNum)
+    public Recipe(string name, int servings, int maxNum)
     {
         Name = name;
         Servings = servings;
-        Ingredient = new string[ingredientNum];
+        Ingredient = new string[maxNum];
     }
 }
